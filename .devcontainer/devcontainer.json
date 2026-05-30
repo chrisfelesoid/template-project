@@ -1,0 +1,30 @@
+{
+  "name": "Template Project",
+  "dockerComposeFile": ["./compose.yaml"],
+  "service": "template-project",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "appuser",
+  "updateRemoteUserUID": true,
+  "postCreateCommand": "mise trust -a && mise install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // This setting has no effect in the project's settings.json.
+        "extensions.autoUpdate": false,
+        "extensions.autoCheckUpdates": false
+      },
+      "extensions": [
+        // Used to ensure CLI consistency and minimize VS Code extension pollution
+        "pucelle.run-on-save@1.11.2",
+        // EditorConfig extension is a highly recommended extension for IDEs.
+        "editorconfig.editorconfig@0.18.2"
+        // For project setup
+        // "codezombiech.gitignore@0.10.0",
+        // The following extensions are effective for improving the IDE experience
+        // "tamasfe.even-better-toml@0.21.2",
+        // "bluebrown.yamlfmt@0.1.6",
+        // "mkhl.shfmt@1.5.2"
+      ]
+    }
+  }
+}
