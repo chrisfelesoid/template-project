@@ -8,62 +8,72 @@ repos:
         language: system
         pass_filenames: false
 
+      - id: zizmor
+        name: Static analysis for GitHub Actions
+        entry: mise exec -- zizmor
+        language: system
+        files: ^\.github/(actions|workflows)/.*\.(yaml|yml)$
+
+      - id: pinact
+        name: Pinning GitHub Actions
+        entry: mise exec -- pinact run -check
+        language: system
+        files: ^\.github/(actions|workflows)/.*\.(yaml|yml)$
+
+      - id: actionlint
+        name: Lint GitHub Actions
+        entry: mise exec -- actionlint
+        language: system
+        files: ^\.github/workflows/.*\.(yaml|yml)$
+
       - id: editorconfig-check
-        name: editorconfig check
+        name: Lint basic rule
         entry: mise exec -- ec
         language: system
-        pass_filenames: true
         types: [text]
 
       - id: taplo-lint
-        name: taplo lint
+        name: Lint toml
         entry: mise exec -- taplo lint
         language: system
-        pass_filenames: true
         files: \.(toml)$
 
       - id: taplo-format
-        name: taplo format
-        entry: mise exec -- taplo format
+        name: Format check toml
+        entry: mise exec -- taplo format --check
         language: system
-        pass_filenames: true
         files: \.(toml)$
         require_serial: true
 
       - id: yaml-format
-        name: yaml format
+        name: Format check yaml
         entry: mise exec -- yamlfmt
         language: system
-        pass_filenames: true
         files: \.(yaml|yml)$
         require_serial: true
 
       - id: shell-lint
-        name: shell lint
+        name: Lint shell script
         entry: mise exec -- shellcheck
         language: system
-        pass_filenames: true
         files: \.(sh)$
 
       - id: shell-format
-        name: shell format
+        name: Format check shell script
         entry: mise exec -- shfmt -ci
         language: system
-        pass_filenames: true
         files: \.(sh)$
         require_serial: true
 
       - id: json-lint
-        name: json lint
+        name: Lint json
         entry: mise exec -- biome lint
         language: system
-        pass_filenames: true
         files: \.(json|jsonc)$
 
       - id: json-format
-        name: json format
+        name: Format check json
         entry: mise exec -- biome format
         language: system
-        pass_filenames: true
         files: \.(json|jsonc)$
         require_serial: true
