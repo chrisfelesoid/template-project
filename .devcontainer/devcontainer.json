@@ -6,6 +6,9 @@
   "remoteUser": "appuser",
   "updateRemoteUserUID": true,
   "postCreateCommand": "mise trust -a && mise install",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:3.0.1": {}
+  },
   "customizations": {
     "vscode": {
       "settings": {
