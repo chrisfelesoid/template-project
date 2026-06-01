@@ -1,0 +1,17 @@
+{
+  "git.openRepositoryInParentFolders": "always",
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true
+  },
+  "go.lintTool": "golangci-lint-v2",
+  "go.lintFlags": ["--path-mode=abs", "--fast-only"],
+  "go.formatTool": "custom",
+  "go.alternateTools": {
+    "customFormatter": "golangci-lint",
+    "golangci-lint": "~/.local/share/mise/shims/golangci-lint",
+    "golangci-lint-v2": "~/.local/share/mise/shims/golangci-lint"
+  },
+  "go.formatFlags": ["fmt", "--stdin"],
+  "go.useLanguageServer": true
+}

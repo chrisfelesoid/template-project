@@ -1,0 +1,11 @@
+services:
+  template-project-infrastructure:
+    build:
+      context: ../../
+      dockerfile: ./.devcontainer/Dockerfile
+      target: dev
+    platform: linux/amd64
+    tty: true
+    volumes:
+      - ..:/workspace
+    working_dir: /workspace/infrastructure

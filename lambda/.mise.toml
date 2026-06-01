@@ -1,0 +1,24 @@
+[tools]
+go = "1.26.3"
+
+"aqua:golangci/golangci-lint" = "2.12.2"
+
+[tasks.build]
+run = """
+BUILD_DEV=true ./scripts/build.sh
+"""
+
+[tasks.lint]
+run = """
+golangci-lint run
+"""
+
+[tasks.format]
+run = """
+golangci-lint fmt
+"""
+
+[tasks.deploy-local]
+run = """
+./scripts/upload-local.sh
+"""

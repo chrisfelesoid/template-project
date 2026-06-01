@@ -1,5 +1,5 @@
 {
-  "name": "Template Project",
+  "name": "template-project",
   "dockerComposeFile": ["./compose.yaml"],
   "service": "template-project",
   "workspaceFolder": "/workspace",

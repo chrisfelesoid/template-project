@@ -1,0 +1,21 @@
+{
+  "name": "template-project-backend",
+  "dockerComposeFile": ["./compose.yaml"],
+  "service": "template-project-backend",
+  "workspaceFolder": "/workspace/backend",
+  "remoteUser": "appuser",
+  "updateRemoteUserUID": true,
+  "postCreateCommand": "mise trust -a && mise install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "extensions.autoUpdate": false,
+        "extensions.autoCheckUpdates": false
+      },
+      "extensions": [
+        "pucelle.run-on-save@1.11.2",
+        "editorconfig.editorconfig@0.18.2"
+      ]
+    }
+  }
+}
