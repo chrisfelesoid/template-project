@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!devcontainer-lock.json"]
+    "includes": ["**", "!devcontainer-lock.json", "!frontend"]
   },
   "formatter": {
     "enabled": true,

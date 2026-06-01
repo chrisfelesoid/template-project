@@ -1,0 +1,21 @@
+{
+  "name": "template-project-frontend",
+  "dockerComposeFile": ["./compose.yaml"],
+  "service": "template-project-frontend",
+  "workspaceFolder": "/workspace/frontend",
+  "remoteUser": "appuser",
+  "updateRemoteUserUID": true,
+  "postCreateCommand": "mise trust -a && mise install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "extensions.autoUpdate": false,
+        "extensions.autoCheckUpdates": false
+      },
+      "extensions": [
+        "pucelle.run-on-save@1.11.2",
+        "editorconfig.editorconfig@0.18.2"
+      ]
+    }
+  }
+}
