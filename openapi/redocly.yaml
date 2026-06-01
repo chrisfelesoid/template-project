@@ -1,0 +1,12 @@
+apis:
+  api@v1:
+    root: ./dist/v1/openapi.gen.yaml
+    x-openapi-ts:
+      output: ../frontend/gen/api/api.ts
+
+extends:
+  - recommended
+
+rules:
+  info-license: off
+  no-server-example.com: off

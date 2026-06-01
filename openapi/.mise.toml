@@ -1,0 +1,30 @@
+[settings]
+npm.package_manager = "pnpm"
+
+[tools]
+go   = "1.26.3"
+node = "24.15.0"
+pnpm = "10.33.3"
+
+"npm:@redocly/cli"       = "2.30.3"
+"npm:openapi-typescript" = "7.13.0"
+"oapi-codegen"           = "2.7.0"
+
+[env]
+API_VERSION = 'v1'
+
+[tasks.lint]
+run = """
+redocly lint
+"""
+
+[tasks.build]
+run = """
+redocly bundle ./${API_VERSION}/openapi.yaml -o ./dist/${API_VERSION}/openapi.gen.yaml
+"""
+
+[tasks.codegen]
+run = """
+oapi-codegen --config=./codegen.yaml ./dist/${API_VERSION}/openapi.gen.yaml
+openapi-typescript
+"""
