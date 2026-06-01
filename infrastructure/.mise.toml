@@ -1,0 +1,5 @@
+[tools]
+aws-cli   = "2.34.45"
+terraform = "1.15.2"
+
+"aqua:terraform-linters/tflint" = "0.62.1"
