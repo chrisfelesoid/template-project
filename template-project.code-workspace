@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "ROOT",
+      "path": "."
+    },
+    {
+      "name": "REPO-FRONTEND",
+      "path": "frontend"
+    },
+    {
+      "name": "REPO-BACKEND",
+      "path": "backend"
+    },
+    {
+      "name": "REPO-LAMBDA",
+      "path": "lambda"
+    },
+    {
+      "name": "REPO-INFRASTRUCTUR",
+      "path": "infrastructure"
+    },
+    {
+      "name": "REPO-OPENAPI",
+      "path": "openapi"
+    },
+  ],
+}
